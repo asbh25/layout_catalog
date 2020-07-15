@@ -12,13 +12,14 @@
     height: 134px;
     transition: transform 1s;
     align-self: center;
+    box-sizing: content-box;
+    padding: 12px 0;
+    margin: -12px 0;
+    outline: 3px solid transparent;
 
     &:hover {
-      box-sizing: content-box;
       transform: scale(1.2);
-      outline: 3px solid $card-border;
-      padding: 12px 0;
-      margin: -12px 0;
+      outline-color: $card-border;
     }
   }
 
@@ -56,6 +57,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
+    transition: color 1s, background-color 1s;
   }
   
   &__btn-purchase:hover {

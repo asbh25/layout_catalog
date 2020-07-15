@@ -19,6 +19,7 @@
     color: black;
     font-size: 12px;
     line-height: 60px;
+    transition: color 1s;
     
     &:hover {
       color: $link-color;
