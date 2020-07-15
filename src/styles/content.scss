@@ -1,12 +1,23 @@
 .main {
-  display: flex;
+  display: grid;
   justify-content: center;
   margin-top: 50px;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 4 * $card-width + 4 * $card-gap;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  column-gap: $card-gap;
+  max-width: 4 * $card-width + 3 * $card-gap;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: $card-width;
+  }
 }
